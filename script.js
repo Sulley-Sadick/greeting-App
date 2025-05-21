@@ -1,6 +1,7 @@
 "use strict";
 
-//Selecting elements
+//selecting elements
+
 const paragraph = document.querySelector(".paragraph");
 const inputField = document.getElementById("personName");
 const greeting = document.getElementById("greeting");
@@ -11,11 +12,13 @@ button.addEventListener("click", function () {
   const name = inputField.value.trim();
 
   if (name) {
-    //Hide paragraph
+    //hide paragraph
     paragraph.classList.add("hidden");
 
+    //displaying message
     greeting.textContent = `Hello ${name}`.toUpperCase();
 
+    //settimeout
     setTimeout(() => {
       greeting.textContent = "";
       paragraph.classList.remove("hidden");
