@@ -7,8 +7,8 @@ const inputField = document.getElementById("personName");
 const greeting = document.getElementById("greeting");
 const button = document.getElementById("button-check");
 
-//Adding eventListener to our button
-button.addEventListener("click", function () {
+// Function: To show name
+const showName = function () {
   const name = inputField.value.trim();
 
   if (name) {
@@ -31,4 +31,7 @@ button.addEventListener("click", function () {
       greeting.textContent = "";
     }, 2000);
   }
-});
+};
+
+//Adding eventListener to our button
+button.addEventListener("click", showName);
